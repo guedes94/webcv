@@ -1,0 +1,19 @@
+<div class="fixed top-0 left-0 right-0 bg-custom-white shadow-lg z-50 overscroll-none">
+    <div class="max-w-6xl mx-auto px-4 py-3">
+        <nav class="flex flex-row justify-between items-center">
+            <div class="text-xl font-bold text-custom-gray">Logo</div>
+            <div class="flex flex-row gap-12">
+                <a routerLink="/"
+                    class="text-custom-gray font-medium hover:text-custom-purple hover:font-semibold transition-all duration-300">Home</a>
+                <a [routerLink]="['/projects']"
+                    class="text-custom-gray font-medium hover:text-custom-purple hover:font-semibold transition-all duration-300">Projects</a>
+                <a routerLink="/about"
+                    class="text-custom-gray font-medium hover:text-custom-purple hover:font-semibold transition-all duration-300">About</a>
+            </div>
+
+            <a routerLink="/contact" class="text-custom-gray hover:text-custom-purple transition-colors duration-300">
+                <mat-icon> chat</mat-icon>
+            </a>
+        </nav>
+    </div>
+</div>

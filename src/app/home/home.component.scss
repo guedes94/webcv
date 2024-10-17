@@ -1,0 +1,69 @@
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+/* animation transition */
+
+/* Keyframes for animated background */
+@keyframes backgroundAnimation {
+  0% {
+    background-color: #ffffff;
+  }
+  50% {
+    background-color: #ffffff;
+  }
+  100% {
+    background-color: #ffffff;
+  }
+}
+
+.animated-background {
+  animation: backgroundAnimation 10s ease-in-out infinite;
+}
+
+/* Keyframes for the fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 3s ease-out;
+}
+
+/* Keyframes for text shadow effect */
+@keyframes textShadow {
+  0% {
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+  100% {
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.text-shadow {
+  animation: textShadow 2s ease-in-out infinite;
+}
+
+.button-disabled {
+  pointer-events: none; /* Desativa os eventos de clique */
+  opacity: 0.6; /* Faz o botão parecer desativado */
+  cursor: not-allowed; /* Altera o cursor para indicar desativado */
+}

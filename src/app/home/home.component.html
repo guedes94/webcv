@@ -1,0 +1,53 @@
+<div class="animated-background h-screen flex flex-col justify-center bg-custom-white p-8 overflow-y-auto">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 px-layout-padding">
+        <!-- Lado Direito - Informações de Contato -->
+        <div class="flex flex-col justify-center fade-in ">
+            <h2 class="text-6xl font-bold mb-4 text-shadow">
+                <span class="text-custom-purple">Front</span><span class="text-black">end Developer</span><span
+                    class="text-custom-purple">.</span>
+            </h2>
+            <p class="text-custom-gray mb-4 text-2xl">
+                A frontend developer based in Porto, Portugal.
+            </p>
+            <!-- LinkedIn -->
+            <a target="_blank" href="https://www.linkedin.com/in/filipeguedes94/"
+                class="text-custom-gray text-lg font-medium mb-2 flex items-center hover:text-custom-purple transition-colors duration-300">
+                <mat-icon class="mr-3">link</mat-icon>
+                linkedin
+            </a>
+
+            <!-- GitHub -->
+            <a target="_blank" href="https://github.com/guedes94"
+                class="text-custom-gray text-lg font-medium flex items-center hover:text-custom-purple transition-colors duration-300">
+                <mat-icon class="mr-3">link</mat-icon>
+                github
+            </a>
+
+            <!-- Botões -->
+            <div class="flex flex-col md:flex-row gap-4 mt-6">
+                <!-- Botão Get In Touch -->
+                <a (click)="openContactForm()" [ngClass]="{'button-disabled': !animationCompleted}"
+                    class="inline-block px-6 py-3 bg-custom-purple text-custom-white rounded-lg shadow-md hover:bg-purple-800 transition-colors duration-300">
+                    Get In Touch
+                </a>
+
+                <!-- formulário -->
+                <app-contact-form></app-contact-form>
+
+                <a routerLink="/projects" [ngClass]="{'button-disabled': !animationCompleted}"
+                    class="inline-block px-6 py-3 bg-custom-gray text-custom-white rounded-lg shadow-md hover:bg-gray-800 transition-colors duration-300">
+                    Browse Projects
+                </a>
+            </div>
+        </div>
+
+        <!-- Lado Esquerdo - Imagem Redonda -->
+        <div class="hidden lg:flex justify-end items-center">
+            <div class="relative w-96 h-96">
+                <img src="https://media.licdn.com/dms/image/v2/D4D03AQHyegu3kloP2w/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1700694596415?e=1729728000&v=beta&t=lOspKn3AdDXneNwV3ZSmtNkcdr8KzO1Jn3WGOYhowxQ"
+                    alt="Profile" class="absolute inset-0 object-cover w-full h-full rounded-full">
+                <div class="absolute inset-0 rounded-full"></div>
+            </div>
+        </div>
+    </div>
+</div>

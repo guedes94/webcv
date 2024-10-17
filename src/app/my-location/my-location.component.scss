@@ -1,0 +1,11 @@
+.card {
+  @apply p-4 shadow-lg rounded-lg bg-white;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.map-container {
+  height: 400px;
+  width: 100%;
+  z-index: 0;
+}

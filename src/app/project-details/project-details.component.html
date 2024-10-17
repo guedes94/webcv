@@ -1,0 +1,87 @@
+<div class="min-h-screen pt-8 pb-8 bg-custom-white fade-in overscroll-y-auto">
+    <div class="max-w-5xl mx-auto px-8">
+
+        <!-- Cabeçalho do Projeto -->
+        <div class="text-center mb-8">
+            <h1 class="text-4xl font-bold text-custom-purple mb-4">{{ project?.title }}</h1>
+            <img [src]="project?.mainImageUrl" alt="{{ project?.title }} Image"
+                class="w-full h-80 object-cover rounded-lg shadow-lg mb-6 ">
+
+        </div>
+
+        <!-- Descrição Geral do Projeto -->
+        <div class="text-custom-gray mb-8 ">
+            <h2 class="text-2xl font-semibold text-custom-purple mb-4">Project Overview</h2>
+            <img [src]="project?.overviewImageUrl" alt="Overview Image"
+                class="w-full h-96 object-cover rounded-lg mb-6 ">
+            <p class="text-lg">{{ project?.overviewDescription }}</p>
+        </div>
+
+        <!-- Funcionalidades do Projeto -->
+        <div class="mb-8 ">
+            <h2 class="text-2xl font-semibold text-custom-purple mb-4">Key Features</h2>
+            <div class="space-y-8">
+                <div *ngFor="let feature of project?.features" class="bg-custom-white p-6 rounded-lg shadow-md ">
+                    <img [src]="feature.imageUrl" alt="Feature Image" class="w-full h-64 object-cover rounded-lg mb-4 ">
+                    <h3 class="text-xl font-semibold text-custom-purple mb-2">{{ feature.title }}</h3>
+                    <p class="text-custom-gray">{{ feature.description }}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção de Tecnologias Utilizadas -->
+        <div class="bg-custom-white p-6 rounded-lg shadow-lg mb-8 ">
+            <h2 class="text-2xl font-semibold text-custom-purple mb-4">Technologies Used</h2>
+            <ul class="list-disc pl-6 text-custom-gray ">
+                <li *ngFor="let tech of project?.technologies">{{ tech }}</li>
+            </ul>
+        </div>
+
+        <!-- Novos Blocos de Texto e Imagem -->
+        <div class="space-y-8">
+            <!-- Bloco 1 -->
+            <div class="flex flex-col md:flex-row bg-custom-white p-6 rounded-lg shadow-md mb-8 ">
+                <img src="/public/project_images/sp01.png" alt="Additional Image 1"
+                    class="w-full md:w-1/2 h-64 object-cover rounded-lg mb-4 md:mb-0 md:mr-6">
+                <div class="md:w-1/2">
+                    <h3 class="text-xl font-semibold text-custom-purple mb-2">Additional Section 1</h3>
+                    <p class="text-custom-gray">Detailed description of this section. Explain what is being shown in the
+                        image and provide additional context.</p>
+                </div>
+            </div>
+
+            <!-- Bloco 2 -->
+            <div class="flex flex-col md:flex-row bg-custom-white p-6 rounded-lg shadow-md mb-8 ">
+                <img src="/src/assets/project_images/additional2.png" alt="Additional Image 2"
+                    class="w-full md:w-1/2 h-64 object-cover rounded-lg mb-4 md:mb-0 md:mr-6">
+                <div class="md:w-1/2">
+                    <h3 class="text-xl font-semibold text-custom-purple mb-2">Additional Section 2</h3>
+                    <p class="text-custom-gray">Detailed description of this section. Explain what is being shown in the
+                        image and provide additional context.</p>
+                </div>
+            </div>
+
+            <!-- Bloco 3 -->
+            <div class="flex flex-col md:flex-row bg-custom-white p-6 rounded-lg shadow-md mb-8 ">
+                <img src="/src/assets/project_images/additional3.png" alt="Additional Image 3"
+                    class="w-full md:w-1/2 h-64 object-cover rounded-lg mb-4 md:mb-0 md:mr-6">
+                <div class="md:w-1/2">
+                    <h3 class="text-xl font-semibold text-custom-purple mb-2">Additional Section 3</h3>
+                    <p class="text-custom-gray">Detailed description of this section. Explain what is being shown in the
+                        image and provide additional context.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção de Resultados e Impacto -->
+        <div class="bg-custom-white p-6 rounded-lg shadow-lg mb-8 ">
+            <h2 class="text-2xl font-semibold text-custom-purple mb-4">Results & Impact</h2>
+            <p class="text-custom-gray">{{ project?.results }}</p>
+        </div>
+
+        <!-- Botão de Voltar -->
+        <div class="text-center mt-8 ">
+            <a [routerLink]="['/projects']" class="text-custom-purple hover:underline inline-block">Back to Projects</a>
+        </div>
+    </div>
+</div>

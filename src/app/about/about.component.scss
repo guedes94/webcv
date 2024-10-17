@@ -1,0 +1,83 @@
+/* Define the sliding animations */
+@keyframes slide-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Animation for text moving from left to right */
+.animate-slide-left {
+  animation: slide-left 5s linear infinite;
+}
+
+/* Animation for text moving from right to left */
+.animate-slide-right {
+  animation: slide-right 5s linear infinite;
+}
+
+/* Adjustments for smaller card size */
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-24 {
+  height: 6rem; /* Adjust height for a smaller card */
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+/* Ensure continuous effect */
+.flex {
+  display: flex;
+}
+
+.whitespace-nowrap {
+  white-space: nowrap;
+}
+
+/* Ensure the moving text container has enough width */
+.animate-slide-left,
+.animate-slide-right {
+  flex: none; /* Ensure text does not shrink */
+  width: 100%; /* Full width of the parent container */
+}
+
+/* page animation transition */
+
+/* Add this to your global stylesheet or component-specific stylesheet */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-out;
+}

@@ -1,0 +1,44 @@
+/* Adicionando a animação de fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-out;
+}
+
+/* Define as animações de deslizamento */
+@keyframes slide-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Animação para texto movendo da esquerda para a direita */
+.animate-slide-left {
+  animation: slide-left 5s linear infinite;
+}
+
+/* Animação para texto movendo da direita para a esquerda */
+.animate-slide-right {
+  animation: slide-right 5s linear infinite;
+}
